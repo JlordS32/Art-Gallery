@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   body {
+      @apply text-grey font-sans text-base;
+   }
+
+   main {
+      @apply outline outline-red-600 outline-1 mx-auto;
+      max-width: 1450px;
+   }
+
+   p,
+   span {
+      @apply text-base;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4 {
+      @apply font-heading text-black font-black uppercase;
+   }
+
+   h1 {
+      @apply text-2xl;
+   }
+
+   h2 {
+      @apply text-xl;
+   }
+
+   h3 {
+      @apply text-lg;
+   }
+
+   h4 {
+      @apply text-md;
+   }
+}
+
+@layer utilities {
+   .flex-center {
+      @apply flex justify-center items-center;
+   }
+
+   .margin-center {
+      @apply mx-auto;
+   }
+}
