@@ -5,7 +5,7 @@ type ButtonProps = {
 
 const Button = ({ text, type = "primary" }: ButtonProps) => {
    return (
-      <button className="font-heading tracking-[0.17rem] text-white group">
+      <button className="font-heading tracking-[0.17rem] text-white group active:scale-95 duration-300">
          <div
             className={`flex-center ${
                type === "primary" ? "bg-black" : "bg-gold"
@@ -13,7 +13,7 @@ const Button = ({ text, type = "primary" }: ButtonProps) => {
                type === "primary"
                   ? "group-hover:bg-gold"
                   : "group-hover:bg-black"
-            } duration-300`}
+            }`}
          >
             {type === "secondary" && (
                <div className="bg-black group-hover:bg-gold">

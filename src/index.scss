@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   body {
+      @apply text-grey font-sans text-base;
+   }
+
+   p,
+   span {
+      @apply text-base;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4 {
+      @apply font-heading text-black font-black uppercase;
+   }
+
+   h1 {
+      @apply text-2xl;
+   }
+
+   h2 {
+      @apply text-xl;
+   }
+
+   h3 {
+      @apply text-lg;
+   }
+
+   h4 {
+      @apply text-md;
+   }
+}
+
+@layer components {
+   .hero-img {
+      /* Dimensions */
+      @apply w-[990px] h-[800px] relative;
+
+      &::before,
+      &::after {
+         @apply absolute content-[attr(data-content)] h-[100%];
+
+         /* Text styling */
+         @apply text-nowrap whitespace-pre-line overflow-hidden text-2xl font-heading uppercase font-black;
+      }
+
+      /* Before */
+      &::before {
+         @apply text-black w-[100%];
+         background-image: url("/images/hero.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: 550px;
+         background-position-x: 450px;
+
+      }
+
+      /* After */
+      &::after {
+         @apply bg-black text-white w-[450px];
+      }
+   }
+}
+
+@layer utilities {
+   .flex-center {
+      @apply flex justify-center items-center;
+   }
+
+   .margin-center {
+      @apply mx-auto;
+   }
+}
