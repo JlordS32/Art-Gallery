@@ -20,7 +20,7 @@ const Button = ({ text, type = "primary" }: ButtonProps) => {
                   <img src="/public/images/arrow_flip.svg" alt="Arrow" />
                </div>
             )}
-            <span className="px-[1.5rem]">{text}</span>
+            <span className="px-[1.5rem] uppercase font-extrabold">{text}</span>
             {type === "primary" && (
                <div className="bg-gold group-hover:bg-black">
                   <img src="/public/images/arrow.svg" alt="Arrow" />

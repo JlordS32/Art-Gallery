@@ -39,33 +39,37 @@
 }
 
 @layer components {
+   .hero {
+      @apply w-[100vw] h-[100vh];
+   }
+
    .hero-img {
       /* Dimensions */
-      @apply w-[990px] h-[800px] relative;
+      @apply w-[75%] h-[100%] relative;
 
-      &::before,
-      &::after {
-         @apply absolute content-[attr(data-content)] h-[100%];
+      .hero-bg,
+      .image-container {
+         @apply absolute h-[100%] text-nowrap overflow-hidden whitespace-nowrap;
 
-         /* Text styling */
-         @apply text-nowrap whitespace-pre-line overflow-hidden text-2xl font-heading uppercase font-black;
+         > span {
+            /* Text Format */
+            @apply font-heading font-black text-2xl uppercase leading-[5.5rem];
+            /* Positioning */
+            @apply absolute top-[25%] left-[20rem];
+         }
       }
 
-      /* Before */
-      &::before {
-         @apply text-black w-[100%];
-         background-image: url("/images/hero.jpg");
-         background-size: cover;
+      .hero-bg {
+         @apply z-[1] w-[40%] bg-black text-white;
+      }
+
+      .image-container {
+         @apply z-[-1] w-[100%] text-black;
+         background-image: url("public/images/hero.jpg");
+         background-size: 60%;
          background-position: center;
          background-repeat: no-repeat;
-         background-size: 550px;
-         background-position-x: 450px;
-
-      }
-
-      /* After */
-      &::after {
-         @apply bg-black text-white w-[450px];
+         background-position-x: right;
       }
    }
 }
