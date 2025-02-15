@@ -45,7 +45,8 @@
 
    .hero-img {
       /* Dimensions */
-      @apply w-[75%] h-[100%] relative;
+      @apply w-[75%] h-full relative z-10;
+      @apply max-lg:w-[60%];
 
       .hero-bg,
       .image-container {
@@ -56,6 +57,8 @@
             @apply font-heading font-black text-2xl uppercase leading-[5.5rem];
             /* Positioning */
             @apply absolute top-[25%] left-[20rem];
+            /* Media queries */
+            @apply max-lg:right-[0rem] max-lg:top-[0%];
          }
       }
 
@@ -78,6 +81,7 @@
 
          @media screen and (max-width: 1024px) {
             background-position: 0;
+            background-size: cover;
          }
       }
    }
@@ -90,5 +94,9 @@
 
    .margin-center {
       @apply mx-auto;
+   }
+
+   .debug {
+      @apply outline outline-red-500 outline-1;
    }
 }

@@ -5,7 +5,7 @@ export default {
       extend: {
          fontSize: {
             "2xl": [
-               "96px",
+               "clamp(70px, 5vw, 96px)",
                {
                   lineHeight: "80px",
                },
