@@ -40,7 +40,7 @@
 
 @layer components {
    .hero {
-      @apply w-[100vw] h-[100vh];
+      @apply h-[100vh];
    }
 
    .hero-img {
@@ -49,7 +49,7 @@
 
       .hero-bg,
       .image-container {
-         @apply absolute h-[100%] text-nowrap overflow-hidden whitespace-nowrap;
+         @apply absolute h-[100%] text-nowrap whitespace-nowrap;
 
          > span {
             /* Text Format */
@@ -60,7 +60,7 @@
       }
 
       .hero-bg {
-         @apply z-[1] w-[40%] bg-black text-white;
+         @apply z-[1] w-[40%] bg-black text-white max-lg:hidden overflow-hidden;
       }
 
       .image-container {
@@ -70,6 +70,15 @@
          background-position: center;
          background-repeat: no-repeat;
          background-position-x: right;
+
+         @media screen and (max-width: 1440px) {
+            background-size: 100%;
+            background-position: 12.5rem;
+         }
+
+         @media screen and (max-width: 1024px) {
+            background-position: 0;
+         }
       }
    }
 }
