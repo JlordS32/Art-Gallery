@@ -1,11 +1,19 @@
 type ButtonProps = {
    text?: string;
    type: "primary" | "secondary";
+   onClick?: () => void;
 };
 
-const Button = ({ text, type = "primary" }: ButtonProps) => {
+const Button = ({
+   text,
+   type = "primary",
+   onClick = () => {},
+}: ButtonProps) => {
    return (
-      <button className="font-heading tracking-[0.17rem] text-white group active:scale-95 duration-300">
+      <button
+         className="font-heading tracking-[0.17rem] text-white group active:scale-95 duration-300"
+         onClick={onClick}
+      >
          <div
             className={`flex-center duration-300 ${
                type === "primary" ? "bg-black" : "bg-gold"

@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const Hero = () => {
+   const navigate = useNavigate();
+
    return (
       <section className="hero">
          <div className="hero-img">
@@ -21,7 +24,13 @@ const Hero = () => {
                      started from a spark of inspiration. Will these pieces
                      inspire you? Visit us and find out.
                   </p>
-                  <Button text="Our Location" type="primary" />
+                  <Button
+                     onClick={() => {
+                        navigate("/about");
+                     }}
+                     text="Our Location"
+                     type="primary"
+                  />
                </div>
             </div>
          </div>
