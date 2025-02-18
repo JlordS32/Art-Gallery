@@ -6,10 +6,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Footer = () => {
+type FooterProps = {
+   className?: string;
+};
+
+const Footer = ({ className = "" }) => {
    return (
-      <footer className=" flex bg-black text-white relative bottom-0 p-[4rem] mt-[15rem] gap-[7rem]">
-         <h4 className="text-white">
+      <footer
+         className={`flex bg-black text-white relative bottom-0 p-[4rem] gap-[7rem] ${className}`}
+      >
+         <h4 className="">
             Modern <br /> Art Gallery
          </h4>
          <p className="text-sm flex-1">
@@ -35,8 +41,7 @@ const Footer = () => {
             <div className="pt-[2rem]">
                Coded by:{" "}
                <a href="https://github.com/JlordS32">
-                  <FontAwesomeIcon icon={faGithub} />
-                  {" "}Jaylou Rasonabe
+                  <FontAwesomeIcon icon={faGithub} /> Jaylou Rasonabe
                </a>
             </div>
          </div>

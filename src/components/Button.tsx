@@ -2,16 +2,18 @@ type ButtonProps = {
    text?: string;
    type: "primary" | "secondary";
    onClick?: () => void;
+   className?: string;
 };
 
 const Button = ({
    text,
    type = "primary",
    onClick = () => {},
+   className = "",
 }: ButtonProps) => {
    return (
       <button
-         className="font-heading tracking-[0.17rem] text-white group active:scale-95 duration-300"
+         className={`font-heading tracking-[0.17rem] text-white group active:scale-95 duration-300 ${className}`}
          onClick={onClick}
       >
          <div
