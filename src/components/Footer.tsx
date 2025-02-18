@@ -10,12 +10,12 @@ type FooterProps = {
    className?: string;
 };
 
-const Footer = ({ className = "" }) => {
+const Footer = ({ className = "" }: FooterProps) => {
    return (
       <footer
          className={`flex bg-black text-white relative bottom-0 p-[4rem] gap-[7rem] ${className}`}
       >
-         <h4 className="">
+         <h4 className="text-inherit">
             Modern <br /> Art Gallery
          </h4>
          <p className="text-sm flex-1">

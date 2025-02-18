@@ -6,8 +6,8 @@ const Home = () => {
    return (
       <main>
          <Hero />
-         {/* <Showcase />
-         <Footer /> */}
+         <Showcase />
+         <Footer className="text-white mt-[15rem]" />
       </main>
    );
 };

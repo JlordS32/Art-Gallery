@@ -58,7 +58,7 @@
             /* Positioning */
             @apply absolute top-[25%] left-[20rem];
             /* Media queries */
-            @apply max-lg:right-[0rem] max-lg:top-[0%];
+            @apply max-lg:left-[75%] max-lg:top-[30%] max-lg:leading-[4.25rem];
          }
       }
 
@@ -80,7 +80,7 @@
          }
 
          @media screen and (max-width: 1024px) {
-            background-position: 0;
+            background-position: center;
             background-size: cover;
          }
       }
